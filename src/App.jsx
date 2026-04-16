@@ -6,6 +6,7 @@ import Movimientos from "./pages/Movimientos";
 import Reporte from "./pages/Reporte";
 import Soporte from "./pages/Soporte";
 import Admin from "./pages/Admin"; // 👈 IMPORTANTE
+import ForgotPassword from "./pages/ForgotPassword";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
 
         {/* auth */}
         <Route path="/login" element={<Login />} />
+        <Route path="/forgot" element={<ForgotPassword />} />
 
         {/* app */}
         <Route path="/dashboard" element={<Dashboard />} />

@@ -52,20 +52,18 @@ export default function Login() {
 
       const user = userCredential.user;
 
-      // ✅ 🔥 SOLO AGREGADO (NO TOCA TU LÓGICA)
+      // 👇 guardar datos básicos
       localStorage.setItem("email", user.email);
       localStorage.setItem("uid", user.uid);
 
-      // 👑 ROLE SIMPLE (SIN FIRESTORE)
+      // 👑 ROLE SIMPLE
       let role = "user";
 
       if (user.email === "admin@gmail.com") {
         role = "admin";
       }
 
-      // 💾 opcional: guardar local
       localStorage.setItem("role", role);
-      localStorage.setItem("email", user.email);
 
       // 🚀 REDIRECCIÓN
       if (role === "admin") {
@@ -138,6 +136,14 @@ export default function Login() {
             ? "¿Ya tienes cuenta? Inicia sesión"
             : "¿Eres nuevo? Crea una cuenta"}
         </p>
+
+        {/* 🔥 NUEVO BOTÓN */}
+        <p
+          style={styles.forgot}
+          onClick={() => navigate("/forgot")}
+        >
+          ¿Olvidaste tu contraseña?
+        </p>
       </div>
     </div>
   );
@@ -152,7 +158,6 @@ const styles = {
     color: "white",
     backdropFilter: "blur(10px)",
   },
-
   input: {
     width: "100%",
     padding: 10,
@@ -161,7 +166,6 @@ const styles = {
     border: "none",
     outline: "none",
   },
-
   button: {
     width: "100%",
     padding: 10,
@@ -171,19 +175,19 @@ const styles = {
     border: "none",
     borderRadius: 8,
     cursor: "pointer",
+    fontWeight: "bold",
   },
-
   toggle: {
     cursor: "pointer",
     marginTop: 15,
     color: "#93c5fd",
     textAlign: "center",
   },
-
-  link: {
+  forgot: {
     cursor: "pointer",
     marginTop: 10,
     color: "#60a5fa",
     textAlign: "center",
+    fontSize: 14,
   },
 };
