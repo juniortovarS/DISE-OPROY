@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -35,22 +34,13 @@
     "globals": "^17.4.0",
     "vite": "^8.0.4"
   },
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "main": "eslint.config.js",
+  "description": "Control de gastos app",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/juniortovarS/DISE-OPROY.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/juniortovarS/DISE-OPROY/issues"
   },
   "homepage": "https://github.com/juniortovarS/DISE-OPROY#readme"
-}
-
-"scripts": {
-  "build": "vite build",
-  "start": "node server.js"
 }
